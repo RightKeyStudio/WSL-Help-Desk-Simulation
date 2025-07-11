@@ -1,0 +1,2 @@
+Backup failure analyzed on Wed Jun 25 17:40:49 EDT 2025
+2025-06-25 17:40:44 BACKUP FAILURE: rsync error on /home/user1
