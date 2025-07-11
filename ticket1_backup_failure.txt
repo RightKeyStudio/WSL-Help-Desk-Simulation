@@ -1,0 +1,31 @@
+
+
+  Ticket ID: #001
+  Issue: User reported failed backup on 2025-06-23
+
+  Date: 2025-06-23
+  Simulated by: TheWrightBrother (via WSL Ubuntu)
+
+
+🛠️   Actions Taken:
+
+1. Checked `/var/log/syslog` for recent backup-related entries
+2. Found error logged at `2025-06-23 18:52:03`:
+
+   > "BACKUP FAILURE: rsync error on /home/user1"
+3. Analyzed error message indicating possible rsync failure due to path or permission issues
+4. Verified write permissions and configuration settings (simulated analysis)
+5. Did *not* modify any configuration or file permissions — diagnostic stage only
+
+
+
+🧠 Outcome:
+Backup failure confirmed via syslog analysis. Root cause likely related to rsync configuration or insufficient write permissions on `/home/user1`. No changes made yet.
+
+
+
+📋   Recommendation:
+Investigate and correct rsync configuration files and ensure the backup user has proper write access to  /home/user1. After adjustments, re-run the backup and monitor logs for errors.
+
+✅   Status: Diagnostic complete – ready for fix implementation or escalation.
+

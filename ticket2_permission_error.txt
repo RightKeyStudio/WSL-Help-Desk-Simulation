@@ -1,0 +1,23 @@
+Ticket ID: #002
+Issue: User reported "Permission denied" when running a backup script
+
+Date: 2025-06-24
+Simulated by: TheWrightBrother (via WSL Ubuntu)
+
+
+
+🛠️ Actions Taken:
+
+1. Created a shell script using echo and redirection
+2. Attempted to execute with ./backup.sh - received "Permission denied"
+3. Verified permissions with: ls -l backup.sh → file was not executable
+4. Resolved by running: chmod +x backup.sh
+5. Confirmed script now executes and outputs: "Backup complete."
+
+
+
+📋 Recommendation:
+Educate user on Linux file permissions: read, write, execute.
+Encourage safe use of `chmod` to avoid security risks.
+
+✅ Status: Resolved.

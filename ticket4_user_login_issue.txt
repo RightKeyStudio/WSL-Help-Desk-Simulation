@@ -1,0 +1,24 @@
+Ticket ID: #004  
+Issue: User unable to log in – password rejected at login screen
+
+Date: 2025-06-24  
+Simulated by: \TheWRightBrother (via WSL Ubuntu)
+
+
+
+
+🛠️ Actions Taken:
+
+1. Simulated login failure with `su - testuser4`
+2. Verified account existence using `cat /etc/passwd | grep testuser4`
+3. Checked account status with `passwd -S testuser4`
+4. Simulated account lockout using `usermod -L`, then reversed with `usermod -U`
+5. Reset user password with `passwd testuser4`
+6. Confirmed successful login with `su - testuser4`
+
+
+
+📋 Recommendation:
+If issues persist, investigate PAM logs and check for group/permission misconfigurations. Suggest enforcing secure password policy and tracking login attempts.
+
+✅ Status: Resolved

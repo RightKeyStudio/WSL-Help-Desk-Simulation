@@ -1,0 +1,28 @@
+Ticket ID: #003  
+Issue: User reported disk full error - unable to save or update files.
+
+Date: 2025-06-24  
+Simulated by: TheWrightBrother (via WSL Ubuntu)
+
+
+
+
+🛠️ Actions Taken:
+
+1. Ran `df -h` - confirmed root partition usage was critically high
+2. Used `sudo du -sh /*` to identify which directories were consuming the most space
+3. Determined that `/var` was among the largest folders
+4. Ran `sudo du -ah /var | sort -hr | head -n 20` to pinpoint the largest files inside `/var`
+5. Did **not** remove files or clean system directories - analysis only
+
+
+
+🧠 Outcome:
+Diagnosis completed successfully. Disk usage confirmed and root cause identified (large files in `/var`), but no deletion or cleanup actions taken.
+
+
+
+📋 Recommendation:
+Next steps would involve safely cleaning large logs and running `sudo apt clean`, followed by verifying disk usage again with `df -h`.
+
+✅ Status: Diagnostic complete - ready for cleanup or escalation.
